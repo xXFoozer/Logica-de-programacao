@@ -68,14 +68,13 @@ public class calculadora extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(3, 3, 3)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel3)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(primeiroNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(43, 43, 43)
-                                    .addComponent(operacao, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(18, 18, 18)
-                            .addComponent(segundoNumero)))
+                            .addComponent(primeiroNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(31, 31, 31)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(operacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel3))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(segundoNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -116,10 +115,22 @@ public class calculadora extends javax.swing.JFrame {
         double numeroDois= Double.parseDouble(this.segundoNumero.getText());
         String op=this.operacao.getSelectedItem().toString();
         
-        //LÓGICA AQUI
+        double result = 0.0;
         
-        this.resultado.setText("CHEGOU AQUI");
+        if(op == "+"){
+            result = numeroUm + numeroDois;
+        }
+        else if(op == "-"){
+            result = numeroUm - numeroDois;
+        }
+        else if (op == "*"){
+             result = numeroUm * numeroDois;
+        } else {
+             result= numeroUm / numeroDois;
+        }
         
+        
+        this.resultado.setText(result + "");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
