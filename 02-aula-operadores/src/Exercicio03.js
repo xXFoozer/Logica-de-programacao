@@ -12,4 +12,4 @@ if (Nplaca == 0 <= 1){
     console.log("NÃO PODE SAIR QUINTA");
 }else if(Nplaca == 8&& 9) {
     console.log("NÃO PODE SAIR NA SEXTA");
-}
+} 
