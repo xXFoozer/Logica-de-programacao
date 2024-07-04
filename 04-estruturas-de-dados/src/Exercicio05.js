@@ -1,10 +1,28 @@
 import leia from "readline-sync"
 
 var lista = []
+for(var i = 0 ; i<10; i++){
+    lista.push(parseInt(Math.random() * 30 ))
+}
+console.log(lista)
 
-var i = 10
-while (i > 0){
-    lista[i]= leia.question("DIGITE OS NUMEROS: ")
-    i--
 
+var inicio = 0
+var fim = lista.length - 1
+while(inicio < fim){
+    var aux = lista[inicio]
+    lista[inicio]= lista[fim]
+    lista[fim]= aux
+
+    inicio++
+    fim--
 }console.log(lista)
+
+// var lista = []
+// var lista2 = []
+// for(var i = lista.length-1; i >= 0 ; i--){
+//     lista2.push(lista[i])
+// }
+// console.log(lista)
+// lista = lista2
+// console.log(lista)
