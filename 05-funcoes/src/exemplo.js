@@ -23,6 +23,7 @@ function multi (num1, num2){
     return result;
 }
 subtrair(35,200);
+
 var resultado = multi(20,30);
 console.log(resultado)
 
