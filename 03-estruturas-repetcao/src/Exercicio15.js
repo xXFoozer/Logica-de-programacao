@@ -17,6 +17,10 @@ for(var i = 0; i < 10; i++){
         qtdM++
     }
 
-
-
+    if(!maiorAltura || altura > maiorAltura){
+        maiorAltura = altura
+    }
+    if(!maiorAltura || altura > maiorAltura){
+        maiorAltura = altura
+    }
 }
