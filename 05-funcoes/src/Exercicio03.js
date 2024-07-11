@@ -1,13 +1,12 @@
 import leia from "readline-sync"
 
-var lista = [];
+var vetor = [];
 
-for(var i = 0; i <= 4; i++ ){
-   var par = leia.questionInt("DIGITE UM NUMERO: ");
+for(var i = 0; i < 4; i++ ){
+   var numeroDigitado = leia.questionInt("DIGITE UM NUMERO PAR: ");
 
-    if( par % 2===0){
-        lista[i]= par
-    }else {
-        console.log("DIGITE APENAS PARES !!!!")
-    } 
-}
+    while(numeroDigitado % 2 !== 0){
+        var numeroDigitado = leia.questionInt("SO ACEITAMOS NUMEROS PAR: ");
+    }
+    vetor[i] = numeroDigitado;
+}console.log(vetor);
