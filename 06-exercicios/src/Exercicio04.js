@@ -1,14 +1,15 @@
 import leia from "readline-sync"
+var texto= leia.question("DIGITE UM TEXTO: ");
+texto = texto.toUpperCase();
+var contadorVogais = 0
 
-var palavra = leia.question("DIGITE PALAVRA OU TXT: ");
-var palavraInvertida="";
-for(var i= palavra.length -1; i >=0; i-- ){
-    palavraInvertida += palavra[i];
+
+for(var i=1; i < texto.length; i++){
+    if(texto[i]==="A"||texto[i]==="E"||texto[i]==="I"||texto[i]==="O"||texto[i]==="U"){
+        contadorVogais++
+
+    }
 
 }
 
-if(palavra === palavraInvertida){
-    console.log("É palindromo")
-}else{
-    console.log("Não é palindromo")
-}
+console.log(`A PALAVRA/TEXTO TEM ${contadorVogais} VOGAIS `)

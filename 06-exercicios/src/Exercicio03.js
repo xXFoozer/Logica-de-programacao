@@ -1,15 +1,21 @@
-import leia from "readline-sync"
-var texto= leia.question("DIGITE UM TEXTO: ");
-texto = texto.toUpperCase();
-var contadorVogais = 0
+import leia from 'readline-sync';
+var opcao = leia.keyInSelect([
+    "C -> F",
+    "C -> K",
+    "K -> C",
+    "K -> F",
+    "F -> C",
+    "F -> K",
+], "SELECIONE A OPCAO") + 1;
 
-
-for(var i=1; i < texto.length; i++){
-    if(texto[i]==="A"||texto[i]==="E"||texto[i]==="I"||texto[i]==="O"||texto[i]==="U"){
-        contadorVogais++
-
-    }
-
+var temp = leia.questionFloat("INFORME A TEMPERATURA: ")
+switch (opcao) {
+    case 1:
+        var K = temp + 273.15
+        console.log(`Valor em KELVIN: ${K}`);
+        break;
+    case 2:
+        var C = temp - 273.15;
+        console.log(`Valor em CELCIUS: ${C}`)
+        break;
 }
-
-console.log(`A PALAVRA/TEXTO TEM ${contadorVogais} VOGAIS `)
